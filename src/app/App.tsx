@@ -2,25 +2,25 @@ import { useEffect, useState } from 'react';
 import { Github, Sparkles, Zap, Brain, MapPin, ArrowRight, Menu, X, Star, Utensils, Coffee, Home, Landmark, ShoppingBag, AlertCircle, Calendar, ChevronDown, Database, Server, Layout, Cpu, Cloud, MessageCircle } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import * as simpleIcons from 'simple-icons';
-import imgMap from 'figma:asset/d82b999b8980d34710e0b50ce5f51836326670c4.png';
-import imgLLMChat from 'figma:asset/8d4936a8ac65362cd09669993644d40df14d4ed7.png';
-import imgLogin from 'figma:asset/70e4eef609fec191d88b4ef62f82d89b90091e5d.png';
-import imgMainHome from 'figma:asset/d60b5367512d740efdc6a0d5c2e9000a82b0ccb2.png';
-import catCharacter from 'figma:asset/0c8b0c9ea942f2b49abd074a4aa7e6344beaf3a1.png';
-import chatbotScreen from 'figma:asset/a6660a96175f42ccb02170e9e4360f7e2e93e65b.png';
-import mapScreen from 'figma:asset/d82b999b8980d34710e0b50ce5f51836326670c4.png';
-import erdDiagram from 'figma:asset/32327793277442cd1d498c5a934f5a9dc9d6b431.png';
+import imgMap from '../assets/d82b999b8980d34710e0b50ce5f51836326670c4.png';
+import imgLLMChat from '../assets/8d4936a8ac65362cd09669993644d40df14d4ed7.png';
+import imgLogin from '../assets/70e4eef609fec191d88b4ef62f82d89b90091e5d.png';
+import imgMainHome from '../assets/d60b5367512d740efdc6a0d5c2e9000a82b0ccb2.png';
+import catCharacter from '../assets/0c8b0c9ea942f2b49abd074a4aa7e6344beaf3a1.png';
+import chatbotScreen from '../assets/a6660a96175f42ccb02170e9e4360f7e2e93e65b.png';
+import mapScreen from '../assets/d82b999b8980d34710e0b50ce5f51836326670c4.png';
+import erdDiagram from '../assets/32327793277442cd1d498c5a934f5a9dc9d6b431.png';
 
 // Simple Icons Helper Component
 const TechIcon = ({ iconName, size = 24 }: { iconName: string; size?: number }) => {
   const icon = (simpleIcons as any)[`si${iconName}`];
   if (!icon) return null;
-  
+
   return (
-    <svg 
-      role="img" 
-      viewBox="0 0 24 24" 
-      width={size} 
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      width={size}
       height={size}
       fill={`#${icon.hex}`}
       xmlns="http://www.w3.org/2000/svg"
@@ -123,21 +123,21 @@ export default function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <motion.div 
+            <motion.div
               className="text-2xl tracking-tight"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
               <span className="bg-gradient-to-r from-green-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent font-bold">오디가냥</span>
             </motion.div>
-            
+
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Features</a>
               <a href="#screenshots" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Screenshots</a>
               <a href="#agents" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Agents</a>
               <a href="#tech" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Tech</a>
               <a href="#team" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Team</a>
-              <a 
+              <a
                 href="https://github.com/gangRG/localy"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -148,7 +148,7 @@ export default function App() {
               </a>
             </div>
 
-            <button 
+            <button
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
@@ -157,7 +157,7 @@ export default function App() {
           </div>
 
           {mobileMenuOpen && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               className="md:hidden mt-4 pb-4 space-y-4"
@@ -167,7 +167,7 @@ export default function App() {
               <a href="#agents" className="block text-gray-700">Agents</a>
               <a href="#tech" className="block text-gray-700">Tech</a>
               <a href="#team" className="block text-gray-700">Team</a>
-              <a 
+              <a
                 href="https://github.com/gangRG/localy"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -184,14 +184,14 @@ export default function App() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0">
-          <img 
-            src={catCharacter} 
+          <img
+            src={catCharacter}
             alt="Background"
             className="w-full h-full object-cover"
           />
         </div>
 
-        <motion.div 
+        <motion.div
           className="relative z-10 text-center px-6 max-w-5xl mx-auto"
           style={{ opacity, scale }}
         >
@@ -203,15 +203,15 @@ export default function App() {
             <div className="inline-block px-5 py-2.5 bg-white/20 backdrop-blur-md rounded-full text-white text-sm mb-8 border border-white/40 shadow-2xl">
               🚀 LangGraph Powered AI Travel Platform
             </div>
-            
+
             <h1 className="text-7xl md:text-9xl text-white mb-8 tracking-tight font-black drop-shadow-2xl" style={{ textShadow: '4px 4px 8px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.5), 1px -1px 2px rgba(0,0,0,0.5), -1px 1px 2px rgba(0,0,0,0.5), 1px 1px 2px rgba(0,0,0,0.5)' }}>
               오디가냥
             </h1>
-            
+
             <p className="text-3xl md:text-4xl text-white mb-6 font-semibold drop-shadow-xl" style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.5), 1px -1px 2px rgba(0,0,0,0.5), -1px 1px 2px rgba(0,0,0,0.5), 1px 1px 2px rgba(0,0,0,0.5)' }}>
               AI가 만들어주는 나만의 즐흥 여행
             </p>
-            
+
             <p className="text-xl md:text-2xl text-white/95 mb-14 max-w-3xl mx-auto leading-relaxed drop-shadow-lg" style={{ textShadow: '2px 2px 5px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.5), 1px -1px 2px rgba(0,0,0,0.5), -1px 1px 2px rgba(0,0,0,0.5), 1px 1px 2px rgba(0,0,0,0.5)' }}>
               멀티 에이전트 시스템이 실시간으로 맞춤 여행을 추천하고<br />
               완벽한 일정표를 자동으로 생성합니다
@@ -230,7 +230,7 @@ export default function App() {
                 View on GitHub
                 <ArrowRight size={22} />
               </motion.a>
-              
+
               <motion.a
                 href="#features"
                 className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/20 text-white rounded-full border-2 border-white/60 hover:bg-white/30 transition-all backdrop-blur-md font-semibold text-lg shadow-2xl"
@@ -250,7 +250,7 @@ export default function App() {
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
         >
           <div className="w-7 h-12 border-2 border-white/80 rounded-full flex items-start justify-center p-2 bg-white/10 backdrop-blur-sm">
-            <motion.div 
+            <motion.div
               className="w-2 h-3 bg-white rounded-full"
               animate={{ y: [0, 16, 0] }}
               transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
@@ -326,15 +326,15 @@ export default function App() {
               <h3 className="text-4xl mb-8 text-gray-900 font-bold">AI 기반 랜덤 즉흥 여행</h3>
               <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
                 <p>
-                  <strong className="text-gray-900 font-semibold">오디가냥</strong>은 LangGraph 기반의 멀티 에이전트 시스템을 활용하여 
+                  <strong className="text-gray-900 font-semibold">오디가냥</strong>은 LangGraph 기반의 멀티 에이전트 시스템을 활용하여
                   사용자에게 맞춤형 여행 계획을 실시간으로 제공하는 AI 여행 플래너입니다.
                 </p>
                 <p>
-                  복잡한 여행 계획 과정을 AI가 자동으로 처리하여, 맛집, 카페, 숙소, 관광지를 
+                  복잡한 여행 계획 과정을 AI가 자동으로 처리하여, 맛집, 카페, 숙소, 관광지를
                   한 번에 추천받고 완벽한 일정표를 생성할 수 있습니다.
                 </p>
                 <p>
-                  8개의 전문화된 AI 에이전트가 협업하여 Google Maps, Places API 등의 
+                  8개의 전문화된 AI 에이전트가 협업하여 Google Maps, Places API 등의
                   실시간 데이터를 활용하여 최적의 여행 루트를 제안합니다.
                 </p>
               </div>
@@ -615,17 +615,17 @@ export default function App() {
                   <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-[3.5rem] p-4 shadow-2xl">
                     {/* Notch */}
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-7 bg-black rounded-b-3xl z-10 shadow-lg"></div>
-                    
+
                     {/* Screen */}
                     <div className="relative bg-white rounded-[3rem] overflow-hidden shadow-inner" style={{ height: '600px' }}>
-                      <img 
-                        src={screen.img} 
-                        alt={screen.title} 
+                      <img
+                        src={screen.img}
+                        alt={screen.title}
                         className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
-                  
+
                   {/* Label */}
                   <div className="text-center mt-8">
                     <h3 className="text-2xl mb-2 text-gray-900 font-bold">{screen.title}</h3>
@@ -793,12 +793,11 @@ export default function App() {
                 whileHover={{ y: -8, scale: 1.03 }}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${
-                    tech.color === 'purple' ? 'from-purple-400 to-purple-600' :
-                    tech.color === 'green' ? 'from-green-400 to-green-600' :
-                    tech.color === 'blue' ? 'from-blue-400 to-blue-600' :
-                    'from-orange-400 to-orange-600'
-                  } shadow-lg`}>
+                  <div className={`p-3 rounded-xl bg-gradient-to-br ${tech.color === 'purple' ? 'from-purple-400 to-purple-600' :
+                      tech.color === 'green' ? 'from-green-400 to-green-600' :
+                        tech.color === 'blue' ? 'from-blue-400 to-blue-600' :
+                          'from-orange-400 to-orange-600'
+                    } shadow-lg`}>
                     <tech.icon size={24} className="text-white" />
                   </div>
                   <h3 className="text-2xl text-gray-900 font-bold">{tech.category}</h3>
@@ -953,9 +952,9 @@ export default function App() {
               <p className="text-purple-100 text-lg">신효빈 DB Engineer가 설계한 완벽한 ERD</p>
             </div>
             <div className="p-8 bg-gray-900">
-              <img 
-                src={erdDiagram} 
-                alt="오디가냥 Database ERD" 
+              <img
+                src={erdDiagram}
+                alt="오디가냥 Database ERD"
                 className="w-full h-auto rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 cursor-pointer"
                 onClick={() => window.open(erdDiagram, '_blank')}
               />
@@ -1012,11 +1011,10 @@ export default function App() {
               <motion.button
                 key={tab.id}
                 onClick={() => setActiveApiTab(tab.id)}
-                className={`px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 ${
-                  activeApiTab === tab.id
+                className={`px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 ${activeApiTab === tab.id
                     ? `bg-gradient-to-r ${tab.color} text-white shadow-2xl scale-110`
                     : 'bg-white text-gray-600 hover:bg-gray-50 shadow-md hover:shadow-lg'
-                }`}
+                  }`}
                 whileHover={{ scale: activeApiTab === tab.id ? 1.1 : 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -1080,11 +1078,10 @@ export default function App() {
                 >
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-600"></div>
                   <div className="flex items-start gap-4">
-                    <div className={`px-4 py-2 rounded-xl font-bold text-sm shadow-lg text-white ${
-                      api.method === 'POST' ? 'bg-gradient-to-r from-green-500 to-emerald-600' :
-                      api.method === 'GET' ? 'bg-gradient-to-r from-blue-500 to-blue-600' :
-                      'bg-gradient-to-r from-red-500 to-red-600'
-                    }`}>
+                    <div className={`px-4 py-2 rounded-xl font-bold text-sm shadow-lg text-white ${api.method === 'POST' ? 'bg-gradient-to-r from-green-500 to-emerald-600' :
+                        api.method === 'GET' ? 'bg-gradient-to-r from-blue-500 to-blue-600' :
+                          'bg-gradient-to-r from-red-500 to-red-600'
+                      }`}>
                       {api.method}
                     </div>
                     <div className="flex-1">
@@ -1144,12 +1141,11 @@ export default function App() {
                 >
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-600"></div>
                   <div className="flex items-start gap-4">
-                    <div className={`px-4 py-2 rounded-xl font-bold text-sm shadow-lg text-white ${
-                      api.method === 'POST' ? 'bg-gradient-to-r from-orange-500 to-red-600' :
-                      api.method === 'GET' ? 'bg-gradient-to-r from-blue-500 to-blue-600' :
-                      api.method === 'PUT' ? 'bg-gradient-to-r from-yellow-500 to-orange-600' :
-                      'bg-gradient-to-r from-red-500 to-red-600'
-                    }`}>
+                    <div className={`px-4 py-2 rounded-xl font-bold text-sm shadow-lg text-white ${api.method === 'POST' ? 'bg-gradient-to-r from-orange-500 to-red-600' :
+                        api.method === 'GET' ? 'bg-gradient-to-r from-blue-500 to-blue-600' :
+                          api.method === 'PUT' ? 'bg-gradient-to-r from-yellow-500 to-orange-600' :
+                            'bg-gradient-to-r from-red-500 to-red-600'
+                      }`}>
                       {api.method}
                     </div>
                     <div className="flex-1">
@@ -1180,12 +1176,11 @@ export default function App() {
                 >
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-teal-600"></div>
                   <div className="flex items-start gap-4">
-                    <div className={`px-4 py-2 rounded-xl font-bold text-sm shadow-lg text-white ${
-                      api.method === 'POST' ? 'bg-gradient-to-r from-cyan-500 to-teal-600' :
-                      api.method === 'GET' ? 'bg-gradient-to-r from-blue-500 to-blue-600' :
-                      api.method === 'PUT' ? 'bg-gradient-to-r from-yellow-500 to-orange-600' :
-                      'bg-gradient-to-r from-red-500 to-red-600'
-                    }`}>
+                    <div className={`px-4 py-2 rounded-xl font-bold text-sm shadow-lg text-white ${api.method === 'POST' ? 'bg-gradient-to-r from-cyan-500 to-teal-600' :
+                        api.method === 'GET' ? 'bg-gradient-to-r from-blue-500 to-blue-600' :
+                          api.method === 'PUT' ? 'bg-gradient-to-r from-yellow-500 to-orange-600' :
+                            'bg-gradient-to-r from-red-500 to-red-600'
+                      }`}>
                       {api.method}
                     </div>
                     <div className="flex-1">
@@ -1255,7 +1250,7 @@ export default function App() {
               >
                 {/* Background Gradient Glow */}
                 <div className={`absolute -inset-0.5 bg-gradient-to-r ${member.color} rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500`}></div>
-                
+
                 {/* Card Content */}
                 <div className="relative bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
                   {/* Avatar Circle */}
@@ -1293,7 +1288,7 @@ export default function App() {
       {/* CTA */}
       <section className="py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE4YzMuMzEgMCA2IDIuNjkgNiA2cy0yLjY5IDYtNiA2LTYtMi42OS02LTYgMi42OS02IDYtNiIvPjwvZz48L2c+PC9zdmc+')] opacity-10"></div>
-        
+
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
