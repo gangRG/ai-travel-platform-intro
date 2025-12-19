@@ -12,9 +12,9 @@
 
 ## 🌐 링크
 
-- **🎨 프로젝트 소개 사이트**: [https://gangRG.github.io/localy-intro/](https://gangRG.github.io/localy-intro/)
+- **🎨 프로젝트 소개 사이트**: [https://gangRG.github.io/ai-travel-platform-intro/](https://gangRG.github.io/ai-travel-platform-intro/)
 - **💻 GitHub 저장소**: [https://github.com/gangRG/localy](https://github.com/gangRG/localy)
-- **📖 소개 사이트 저장소**: [https://github.com/gangRG/localy-intro](https://github.com/gangRG/localy-intro)
+- **📖 소개 사이트 저장소**: [https://github.com/gangRG/ai-travel-platform-intro](https://github.com/gangRG/ai-travel-platform-intro)
 
 ---
 
